@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Image from "next/image";
 
 const Home: NextPage = () => {
 	return (
@@ -11,7 +12,9 @@ const Home: NextPage = () => {
 			</Head>
 
 			<div className="container flex flex-col items-center justify-center min-h-screen p-10 px-0 mx-auto md:py-20 md:p-10 md:px-0">
-				<img src="/profilepic.jpg" alt="avatar" className="rounded-full h-96 w-96" />
+				<div className="h-96 w-96 relative">
+					<Image src="/profilepic.jpg" alt="avatar" className="rounded-full" layout="fill" />
+				</div>
 				<h1 className="font-extrabold text-center text-7xl mt-4 mb-8">
 					<span className="text-blue-500">Amirrul</span> Kasmirhan
 				</h1>

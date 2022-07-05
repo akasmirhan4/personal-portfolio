@@ -16,7 +16,7 @@ const Home: NextPage = () => {
 					<div className="flex flex-col w-4/5">
 						<h2 className="font-bold text-5xl">HI THERE!</h2>
 						<h1 className="font-bold text-7xl">
-							I'M <span className="text-emerald-300">AMIRRUL</span>
+							{"I'M"} <span className="text-emerald-300">AMIRRUL</span>
 						</h1>
 						<div className="flex">
 							<div className="bg-emerald-300 py-1 px-3 mt-4">
@@ -27,8 +27,9 @@ const Home: NextPage = () => {
 						</div>
 						<div className="mt-8">
 							<p>
-								I'm a software developer and a self-proclaimed model. I'm currently working as a software developer at Recap Sdn Bhd. Drop me a text if you want
-								to talk to me about anything.
+								{
+									"I'm a software developer and a self-proclaimed model. I'm currently working as a software developer at Recap Sdn Bhd. Drop me a text if you want to talk to me about anything."
+								}
 							</p>
 						</div>
 						<div className="mt-8">

@@ -11,52 +11,36 @@ const Home: NextPage = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<div className="container flex flex-col items-center justify-center min-h-screen p-10 px-0 mx-auto md:py-20 md:p-10 md:px-0">
-				<div className="h-96 w-96 relative">
-					<Image src="/profilepic.jpg" alt="avatar" className="rounded-full" layout="fill" />
+			<div className="flex w-screen h-screen">
+				<div className="flex flex-col items-center justify-center w-1/2">
+					<div className="flex flex-col w-4/5">
+						<h2 className="font-bold text-5xl">HI THERE!</h2>
+						<h1 className="font-bold text-7xl">
+							I'M <span className="text-emerald-300">AMIRRUL</span>
+						</h1>
+						<div className="flex">
+							<div className="bg-emerald-300 py-1 px-3 mt-4">
+								<h6 className="font-bold">
+									SOFTWARE DEVELOPER 💻 / <span className="line-through">MODEL 🍑</span>
+								</h6>
+							</div>
+						</div>
+						<div className="mt-8">
+							<p>
+								I'm a software developer and a self-proclaimed model. I'm currently working as a software developer at Recap Sdn Bhd. Drop me a text if you want
+								to talk to me about anything.
+							</p>
+						</div>
+						<div className="mt-8">
+							<button className="bg-emerald-300 hover:bg-emerald-500 text-white font-bold px-5 py-3 rounded-full transition-all">MORE ABOUT ME</button>
+						</div>
+					</div>
 				</div>
-				<h1 className="font-extrabold text-center text-7xl mt-4 mb-8">
-					<span className="text-blue-500">Amirrul</span> Kasmirhan
-				</h1>
-
-				<h3 className="items-center m-5 text-3xl">This stack uses:</h3>
-				<main className="grid items-start grid-cols-1 gap-10 p-5 md:p-0 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-					<section className="h-full max-h-72 transform group border-2 border-neutral-800 rounded-2xl duration-300 hover:scale-105 hover:border-blue-600 hover:-translate-y-1 hover:shadow-2xl">
-						<a href="https://nextjs.org/" target="_blank" rel="noreferrer">
-							<div className="p-5 py-10 flex flex-col justify-center h-full text-center">
-								<h2 className="mb-5 text-3xl">NextJS</h2>
-								<p className="mb-5">The React framework for production</p>
-								<button className="p-2 px-6 w-fit self-center text-white font-bold bg-blue-500 rounded-full group-hover:bg-blue-600 duration-300">
-									Documentation
-								</button>
-							</div>
-						</a>
-					</section>
-
-					<section className="h-full max-h-72 transform group border-2 border-neutral-800 rounded-2xl duration-300 hover:scale-105 hover:border-blue-600 hover:-translate-y-1 hover:shadow-2xl">
-						<a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
-							<div className="p-5 py-10 flex flex-col justify-center h-full text-center">
-								<h2 className="mb-5 text-3xl">TypeScript</h2>
-								<p className="mb-5">Strongly typed programming language that builds on JavaScript, giving you better tooling at any scale</p>
-								<button className="p-2 px-6 w-fit self-center text-white font-bold bg-blue-500 rounded-full group-hover:bg-blue-600 duration-300">
-									Documentation
-								</button>
-							</div>
-						</a>
-					</section>
-
-					<section className="h-full max-h-72 transform group border-2 border-neutral-800 rounded-2xl duration-300 hover:scale-105 hover:border-blue-600 hover:-translate-y-1 hover:shadow-2xl">
-						<a href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
-							<div className="p-5 py-10 flex flex-col justify-center h-full text-center">
-								<h2 className="mb-5 text-3xl">TailwindCSS</h2>
-								<p className="mb-5">Rapidly build modern websites without ever leaving your HTML</p>
-								<button className="p-2 px-6 w-fit self-center text-white font-bold bg-blue-500 rounded-full group-hover:bg-blue-600 duration-300">
-									Documentation
-								</button>
-							</div>
-						</a>
-					</section>
-				</main>
+				<div className="flex w-1/2 items-center justify-center relative bg-emerald-100">
+					<div className="max-w-lg w-full">
+						<Image src="/images/sexy-amirrul-2.png" alt="Amirrul Kasmirhan" height={1088} width={713} layout="responsive" />
+					</div>
+				</div>
 			</div>
 		</>
 	);

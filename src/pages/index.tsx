@@ -1,8 +1,20 @@
-import type { NextPage } from "next";
+import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 
-const Home: NextPage = () => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
+	const followers = await (await fetch("https://api.github.com/users/akasmirhan4/followers")).json();
+
+	console.log({ followers });
+
+	return {
+		props: {
+			followers,
+		},
+	};
+};
+
+const Home: NextPage<{ followers: any[] }> = ({ followers }) => {
 	const navItems = [
 		{
 			label: "home",
@@ -55,7 +67,7 @@ const Home: NextPage = () => {
 						<div className="mt-8">
 							<p>
 								{
-									"I'm a software developer and a self-proclaimed model. I'm currently working as at Recap Sdn Bhd. Drop me a text if you want to talk to me about anything. Also I am sorry for the explicit image of myself. I'm not a model. I'm a software developer. I swear it's just a placeholder for a better picture of myself..."
+									"I'm a software developer and a self-proclaimed model. I'm currently working at Recap Sdn Bhd. Drop me a text if you want to talk to me about anything. Also I am sorry for the explicit image of myself. I'm not a model. I'm a software developer. I swear it's just a placeholder for a better picture of myself..."
 								}
 							</p>
 						</div>
@@ -125,7 +137,7 @@ const Home: NextPage = () => {
 											<p className="text-white uppercase font-bold mt-2">Happy Clients</p>
 										</div>
 										<div className="bg-black flex justify-center items-center p-8 flex-col">
-											<h2 className="text-emerald-300 font-bold text-6xl">0</h2>
+											<h2 className="text-emerald-300 font-bold text-6xl">{followers.length ?? "🕷"}</h2>
 											<p className="text-white uppercase font-bold mt-2">Followers</p>
 										</div>
 									</div>

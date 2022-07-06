@@ -63,7 +63,7 @@ const Home: NextPage = () => {
 							<button className="bg-emerald-300 hover:bg-emerald-500 text-white font-bold px-5 py-3 rounded-full transition-all">MORE ABOUT ME</button>
 						</div>
 					</div>
-				</div>
+			</div>
 				<div className="flex items-center justify-center relative bg-emerald-100">
 					<div className="max-w-sm md:max-w-lg w-full">
 						<Image src="/images/sexy-amirrul-2.png" alt="Amirrul Kasmirhan" height={1088} width={713} layout="responsive" />
@@ -98,7 +98,7 @@ const Home: NextPage = () => {
 					</div>
 					<div className="md:ml-4 text-center md:text-left">
 						<h4 className="text-2xl md:text-4xl">
-							I'm <span className="font-bold">Amirrul Kasmirhan,</span> Fullstack / Application Developer
+							{"I'm"} <span className="font-bold">Amirrul Kasmirhan,</span> Fullstack / Application Developer
 						</h4>
 						<p className="my-8">
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus molestias, autem, aliquid dicta, accusantium voluptates quis modi natus

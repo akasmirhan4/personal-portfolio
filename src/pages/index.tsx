@@ -55,7 +55,7 @@ const Home: NextPage = () => {
 						<div className="mt-8">
 							<p>
 								{
-									"I'm a software developer and a self-proclaimed model. I'm currently working as a software developer at Recap Sdn Bhd. Drop me a text if you want to talk to me about anything."
+									"I'm a software developer and a self-proclaimed model. I'm currently working as at Recap Sdn Bhd. Drop me a text if you want to talk to me about anything. Also I am sorry for the explicit image of myself. I'm not a model. I'm a software developer. I swear it's just a placeholder for a better picture of myself..."
 								}
 							</p>
 						</div>

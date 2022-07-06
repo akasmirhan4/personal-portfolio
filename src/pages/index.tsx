@@ -38,16 +38,16 @@ const Home: NextPage = () => {
 			</Head>
 
 			{/* home */}
-			<div className="h-screen grid md:grid-cols-2 sm:grid-cols-1 gap-4" id="home">
-				<div className="flex flex-col items-center justify-center py-16">
-					<div className="flex flex-col w-4/5">
-						<h2 className="font-bold text-5xl">HI THERE!</h2>
-						<h1 className="font-bold text-7xl">
+			<div className="md:h-screen grid md:grid-cols-2 grid-cols-1 gap-4" id="home">
+				<div className="flex flex-col items-center justify-center py-16 text-center md:text-left">
+					<div className="flex flex-col md:w-4/5 mx-4 md:mx-0">
+						<h2 className="font-bold md:text-5xl text-4xl">HI THERE!</h2>
+						<h1 className="font-bold md:text-7xl text-5xl">
 							{"I'M"} <span className="text-emerald-300">AMIRRUL</span>
 						</h1>
-						<div className="flex">
+						<div className="flex justify-center md:justify-start">
 							<div className="bg-emerald-300 py-1 px-3 mt-4">
-								<h6 className="font-bold">
+								<h6 className="font-bold md:text-md text-sm">
 									SOFTWARE DEVELOPER 💻 / <span className="line-through">MODEL 🍑</span>
 								</h6>
 							</div>
@@ -65,7 +65,7 @@ const Home: NextPage = () => {
 					</div>
 				</div>
 				<div className="flex items-center justify-center relative bg-emerald-100">
-					<div className="sm:max-w-sm md:max-w-lg w-full">
+					<div className="max-w-sm md:max-w-lg w-full">
 						<Image src="/images/sexy-amirrul-2.png" alt="Amirrul Kasmirhan" height={1088} width={713} layout="responsive" />
 					</div>
 				</div>
@@ -73,9 +73,9 @@ const Home: NextPage = () => {
 			{/* about me */}
 			<div className="flex h-screen bg-gray-100">
 				{/* left drawer navigator */}
-				<nav className="bg-emerald-100 h-screen top-0 left-0 flex flex-col">
+				<nav className="bg-emerald-100 h-screen top-0 left-0 flex-col hidden md:flex">
 					<div className="flex items-center justify-center relative bg-emerald-100">
-						<div className="sm:max-w-sm md:max-w-lg w-full mx-8">
+						<div className="max-w-sm md:max-w-lg w-full mx-8">
 							<Image src="/images/sexy-amirrul-2.png" alt="Amirrul Kasmirhan" height={1088} width={713} layout="responsive" />
 						</div>
 					</div>
@@ -92,12 +92,12 @@ const Home: NextPage = () => {
 				</nav>
 				<div className="container grow">
 					<div className="flex items-center justify-center">
-						<div className="border-dashed border w-full flex justify-center items-center py-4 border-gray-400 my-16">
-							<h2 className="font-bold text-8xl">ABOUT ME</h2>
+						<div className="border-dashed border w-full flex justify-center items-center py-4 border-gray-400 my-16 mx-4">
+							<h2 className="font-bold text-4xl md:text-8xl">ABOUT ME</h2>
 						</div>
 					</div>
-					<div className="ml-4">
-						<h4 className="text-4xl">
+					<div className="md:ml-4 text-center md:text-left">
+						<h4 className="text-2xl md:text-4xl">
 							I'm <span className="font-bold">Amirrul Kasmirhan,</span> Fullstack / Application Developer
 						</h4>
 						<p className="my-8">
@@ -106,11 +106,11 @@ const Home: NextPage = () => {
 							elit. Odio neque, maiores blanditiis consequatur optio perferendis nulla eum, voluptate praesentium nihil earum similique error in? Veritatis
 							obcaecati ea ut earum quasi.
 						</p>
-						<div className="grid sm:grid-cols-1 md:grid-cols-5 gap-16">
+						<div className="grid grid-cols-1 md:grid-cols-5">
 							<div className="col-span-3">
 								<div className="bg-black p-8">
-									<div className="grid sm:grid-cols-1 md:grid-cols-2">
-										<div className="bg-black flex justify-center items-center p-8 flex-col sm:border-r-0 md:border-r border-b border-dashed">
+									<div className="grid grid-cols-1 md:grid-cols-2">
+										<div className="bg-black flex justify-center items-center p-8 flex-col border-r-0 md:border-r border-b border-dashed">
 											<h2 className="text-emerald-300 font-bold text-6xl">1+</h2>
 											<p className="text-white uppercase font-bold mt-2">Years Experience</p>
 										</div>
@@ -118,7 +118,7 @@ const Home: NextPage = () => {
 											<h2 className="text-emerald-300 font-bold text-6xl">10+</h2>
 											<p className="text-white uppercase font-bold mt-2">Projects done</p>
 										</div>
-										<div className="bg-black flex justify-center items-center p-8 flex-col sm:border-r-0 md:border-r md:border-b-0 sm:border-b border-dashed">
+										<div className="bg-black flex justify-center items-center p-8 flex-col border-r-0 md:border-r md:border-b-0 border-b border-dashed">
 											<h2 className="text-emerald-300 font-bold text-6xl">10+</h2>
 											<p className="text-white uppercase font-bold mt-2">Happy Clients</p>
 										</div>
@@ -129,13 +129,15 @@ const Home: NextPage = () => {
 									</div>
 								</div>
 							</div>
-							<div className="col-span-2">
-								<h4 className="text-4xl font-bold mb-4">What I Do?</h4>
-								<div className="flex items-center">
-									<div className="mr-8 w-96">
-										<Image src="/images/web-dev.svg" width={1170} height={911} />
+							<div className="col-span-2 my-8 md:my-0 md:ml-8">
+								<h4 className="text-4xl font-bold mb-8">What I Do?</h4>
+								<div className="grid grid-cols-1 md:grid-cols-4 justify-center my-2">
+									<div className="flex justify-center my-4 md:mr-4">
+										<div className="w-32">
+											<Image src="/images/web-dev.svg" width={1170} height={911} />
+										</div>
 									</div>
-									<div className="flex flex-col">
+									<div className="flex flex-col md:col-span-3">
 										<h6 className="uppercase font-extrabold text-lg mb-2">Fullstack developer</h6>
 										<p className="text-sm">
 											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, laborum impedit minima accusantium aperiam quam atque tempora
@@ -143,12 +145,14 @@ const Home: NextPage = () => {
 										</p>
 									</div>
 								</div>
-								<div className="flex items-center mt-8">
-									<div className="mr-8 w-96">
-										<Image src="/images/mobile-dev.svg" width={1170} height={911} />
+								<div className="grid grid-cols-1 md:grid-cols-4 justify-center my-2">
+									<div className="flex justify-center my-4 md:mr-4">
+										<div className="w-32">
+											<Image src="/images/mobile-dev.svg" width={1170} height={911} />
+										</div>
 									</div>
-									<div className="flex flex-col">
-										<h6 className="uppercase font-extrabold text-lg mb-2">Application developer</h6>
+									<div className="flex flex-col md:col-span-3">
+										<h6 className="uppercase font-extrabold text-lg mb-2">Fullstack developer</h6>
 										<p className="text-sm">
 											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, laborum impedit minima accusantium aperiam quam atque tempora
 											obcaecati dicta neque consequuntur eaque sint ea officiis enim a. Praesentium, sunt suscipit!

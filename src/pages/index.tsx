@@ -152,7 +152,7 @@ const Home: NextPage = () => {
 										</div>
 									</div>
 									<div className="flex flex-col md:col-span-3">
-										<h6 className="uppercase font-extrabold text-lg mb-2">Fullstack developer</h6>
+										<h6 className="uppercase font-extrabold text-lg mb-2">Application developer</h6>
 										<p className="text-sm">
 											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, laborum impedit minima accusantium aperiam quam atque tempora
 											obcaecati dicta neque consequuntur eaque sint ea officiis enim a. Praesentium, sunt suscipit!

@@ -3,6 +3,32 @@ import Head from "next/head";
 import Image from "next/image";
 
 const Home: NextPage = () => {
+	const navItems = [
+		{
+			label: "home",
+			href: "#home",
+		},
+		{
+			label: "about me",
+			href: "#about",
+		},
+		{
+			label: "resume",
+			href: "#resume",
+		},
+		{
+			label: "portfolio",
+			href: "#portfolio",
+		},
+		{
+			label: "testimonials",
+			href: "#testimonials",
+		},
+		{
+			label: "contact",
+			href: "#contact",
+		},
+	];
 	return (
 		<>
 			<Head>
@@ -11,7 +37,8 @@ const Home: NextPage = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<div className="h-screen grid md:grid-cols-2 sm:grid-cols-1 gap-4">
+			{/* home */}
+			<div className="h-screen grid md:grid-cols-2 sm:grid-cols-1 gap-4" id="home">
 				<div className="flex flex-col items-center justify-center py-16">
 					<div className="flex flex-col w-4/5">
 						<h2 className="font-bold text-5xl">HI THERE!</h2>
@@ -43,6 +70,109 @@ const Home: NextPage = () => {
 					</div>
 				</div>
 			</div>
+			{/* about me */}
+			<div className="flex h-screen bg-gray-100">
+				{/* left drawer navigator */}
+				<nav className="bg-emerald-100 h-screen top-0 left-0 flex flex-col">
+					<div className="flex items-center justify-center relative bg-emerald-100">
+						<div className="sm:max-w-sm md:max-w-lg w-full mx-8">
+							<Image src="/images/sexy-amirrul-2.png" alt="Amirrul Kasmirhan" height={1088} width={713} layout="responsive" />
+						</div>
+					</div>
+					<div className="grow flex items-center justify-center px-16">
+						<ul className="flex items-center justify-center flex-col">
+							<div className="w-2 h-2 rounded-full bg-black" />
+							<div className="border-dashed border-black h-4 border-r" />
+							{navItems.map((item) => (
+								<NavItem key={item.href} {...item} />
+							))}
+							<div className="w-2 h-2 rounded-full bg-black" />
+						</ul>
+					</div>
+				</nav>
+				<div className="container grow">
+					<div className="flex items-center justify-center">
+						<div className="border-dashed border w-full flex justify-center items-center py-4 border-gray-400 my-16">
+							<h2 className="font-bold text-8xl">ABOUT ME</h2>
+						</div>
+					</div>
+					<div className="ml-4">
+						<h4 className="text-4xl">
+							I'm <span className="font-bold">Amirrul Kasmirhan,</span> Fullstack / Application Developer
+						</h4>
+						<p className="my-8">
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus molestias, autem, aliquid dicta, accusantium voluptates quis modi natus
+							perspiciatis pariatur vero provident veritatis dolorum amet aut qui? Neque, illo nostrum. Lorem ipsum, dolor sit amet consectetur adipisicing
+							elit. Odio neque, maiores blanditiis consequatur optio perferendis nulla eum, voluptate praesentium nihil earum similique error in? Veritatis
+							obcaecati ea ut earum quasi.
+						</p>
+						<div className="grid sm:grid-cols-1 md:grid-cols-5 gap-16">
+							<div className="col-span-3">
+								<div className="bg-black p-8">
+									<div className="grid sm:grid-cols-1 md:grid-cols-2">
+										<div className="bg-black flex justify-center items-center p-8 flex-col sm:border-r-0 md:border-r border-b border-dashed">
+											<h2 className="text-emerald-300 font-bold text-6xl">1+</h2>
+											<p className="text-white uppercase font-bold mt-2">Years Experience</p>
+										</div>
+										<div className="bg-black flex justify-center items-center p-8 flex-col border-b border-dashed">
+											<h2 className="text-emerald-300 font-bold text-6xl">10+</h2>
+											<p className="text-white uppercase font-bold mt-2">Projects done</p>
+										</div>
+										<div className="bg-black flex justify-center items-center p-8 flex-col sm:border-r-0 md:border-r md:border-b-0 sm:border-b border-dashed">
+											<h2 className="text-emerald-300 font-bold text-6xl">10+</h2>
+											<p className="text-white uppercase font-bold mt-2">Happy Clients</p>
+										</div>
+										<div className="bg-black flex justify-center items-center p-8 flex-col">
+											<h2 className="text-emerald-300 font-bold text-6xl">0</h2>
+											<p className="text-white uppercase font-bold mt-2">Followers</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div className="col-span-2">
+								<h4 className="text-4xl font-bold mb-4">What I Do?</h4>
+								<div className="flex items-center">
+									<div className="mr-8 w-96">
+										<Image src="/images/web-dev.svg" width={1170} height={911} />
+									</div>
+									<div className="flex flex-col">
+										<h6 className="uppercase font-extrabold text-lg mb-2">Fullstack developer</h6>
+										<p className="text-sm">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, laborum impedit minima accusantium aperiam quam atque tempora
+											obcaecati dicta neque consequuntur eaque sint ea officiis enim a. Praesentium, sunt suscipit!
+										</p>
+									</div>
+								</div>
+								<div className="flex items-center mt-8">
+									<div className="mr-8 w-96">
+										<Image src="/images/mobile-dev.svg" width={1170} height={911} />
+									</div>
+									<div className="flex flex-col">
+										<h6 className="uppercase font-extrabold text-lg mb-2">Application developer</h6>
+										<p className="text-sm">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, laborum impedit minima accusantium aperiam quam atque tempora
+											obcaecati dicta neque consequuntur eaque sint ea officiis enim a. Praesentium, sunt suscipit!
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</>
+	);
+};
+
+const NavItem = ({ label, href }: { label: string; href: string }) => {
+	return (
+		<>
+			<li className="py-1">
+				<a href={href} className="text-lg uppercase font-black hover:text-emerald-400 transition-all">
+					<h3>{label}</h3>
+				</a>
+			</li>
+			<div className="border-dashed border-black h-4 border-r" />
 		</>
 	);
 };

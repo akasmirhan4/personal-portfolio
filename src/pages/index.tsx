@@ -3,18 +3,16 @@ import Head from "next/head";
 import Image from "next/image";
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-	const followers = await (await fetch("https://api.github.com/users/akasmirhan4/followers")).json();
-
-	console.log({ followers });
+	const account = await (await fetch("https://api.github.com/users/akasmirhan4")).json();
 
 	return {
 		props: {
-			followers,
+			account,
 		},
 	};
 };
 
-const Home: NextPage<{ followers: any[] }> = ({ followers }) => {
+const Home: NextPage<{ account: Account }> = ({ account }) => {
 	const navItems = [
 		{
 			label: "home",
@@ -125,19 +123,21 @@ const Home: NextPage<{ followers: any[] }> = ({ followers }) => {
 								<div className="bg-black p-8">
 									<div className="grid grid-cols-1 md:grid-cols-2">
 										<div className="bg-black flex justify-center items-center p-8 flex-col border-r-0 md:border-r border-b border-dashed">
-											<h2 className="text-emerald-300 font-bold text-6xl">1+</h2>
+											<h2 className="text-emerald-300 font-bold text-6xl">
+												{account?.created_at ? `${Math.abs(new Date(Date.now() - new Date(account.created_at).getTime()).getFullYear() - 1970)}+` : "🕷"}
+											</h2>
 											<p className="text-white uppercase font-bold mt-2">Years Experience</p>
 										</div>
 										<div className="bg-black flex justify-center items-center p-8 flex-col border-b border-dashed">
-											<h2 className="text-emerald-300 font-bold text-6xl">10+</h2>
-											<p className="text-white uppercase font-bold mt-2">Projects done</p>
+											<h2 className="text-emerald-300 font-bold text-6xl">{account?.public_repos ?? "🕷"}</h2>
+											<p className="text-white uppercase font-bold mt-2">Projects</p>
 										</div>
 										<div className="bg-black flex justify-center items-center p-8 flex-col border-r-0 md:border-r md:border-b-0 border-b border-dashed">
-											<h2 className="text-emerald-300 font-bold text-6xl">10+</h2>
+											<h2 className="text-emerald-300 font-bold text-6xl">🤷‍♂️</h2>
 											<p className="text-white uppercase font-bold mt-2">Happy Clients</p>
 										</div>
 										<div className="bg-black flex justify-center items-center p-8 flex-col">
-											<h2 className="text-emerald-300 font-bold text-6xl">{followers.length ?? "🕷"}</h2>
+											<h2 className="text-emerald-300 font-bold text-6xl">{account?.followers ?? "🕷"}</h2>
 											<p className="text-white uppercase font-bold mt-2">Followers</p>
 										</div>
 									</div>

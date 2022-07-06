@@ -63,7 +63,7 @@ const Home: NextPage = () => {
 							<button className="bg-emerald-300 hover:bg-emerald-500 text-white font-bold px-5 py-3 rounded-full transition-all">MORE ABOUT ME</button>
 						</div>
 					</div>
-			</div>
+				</div>
 				<div className="flex items-center justify-center relative bg-emerald-100">
 					<div className="max-w-sm md:max-w-lg w-full">
 						<Image src="/images/sexy-amirrul-2.png" alt="Amirrul Kasmirhan" height={1088} width={713} layout="responsive" />
@@ -134,7 +134,7 @@ const Home: NextPage = () => {
 								<div className="grid grid-cols-1 md:grid-cols-4 justify-center my-2">
 									<div className="flex justify-center my-4 md:mr-4">
 										<div className="w-32">
-											<Image src="/images/web-dev.svg" width={1170} height={911} />
+											<Image src="/images/web-dev.svg" width={1170} height={911} alt="web development logo" />
 										</div>
 									</div>
 									<div className="flex flex-col md:col-span-3">
@@ -148,7 +148,7 @@ const Home: NextPage = () => {
 								<div className="grid grid-cols-1 md:grid-cols-4 justify-center my-2">
 									<div className="flex justify-center my-4 md:mr-4">
 										<div className="w-32">
-											<Image src="/images/mobile-dev.svg" width={1170} height={911} />
+											<Image src="/images/mobile-dev.svg" width={1170} height={911} alt="application development logo"/>
 										</div>
 									</div>
 									<div className="flex flex-col md:col-span-3">

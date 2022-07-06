@@ -11,8 +11,8 @@ const Home: NextPage = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<div className="flex w-screen h-screen">
-				<div className="flex flex-col items-center justify-center w-1/2">
+			<div className="h-screen grid md:grid-cols-2 sm:grid-cols-1 gap-4">
+				<div className="flex flex-col items-center justify-center py-16">
 					<div className="flex flex-col w-4/5">
 						<h2 className="font-bold text-5xl">HI THERE!</h2>
 						<h1 className="font-bold text-7xl">
@@ -37,8 +37,8 @@ const Home: NextPage = () => {
 						</div>
 					</div>
 				</div>
-				<div className="flex w-1/2 items-center justify-center relative bg-emerald-100">
-					<div className="max-w-lg w-full">
+				<div className="flex items-center justify-center relative bg-emerald-100">
+					<div className="sm:max-w-sm md:max-w-lg w-full">
 						<Image src="/images/sexy-amirrul-2.png" alt="Amirrul Kasmirhan" height={1088} width={713} layout="responsive" />
 					</div>
 				</div>

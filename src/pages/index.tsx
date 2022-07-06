@@ -60,7 +60,9 @@ const Home: NextPage = () => {
 							</p>
 						</div>
 						<div className="mt-8">
-							<button className="bg-emerald-300 hover:bg-emerald-500 text-white font-bold px-5 py-3 rounded-full transition-all">MORE ABOUT ME</button>
+							<a href="#about">
+								<button className="bg-emerald-300 hover:bg-emerald-500 text-white font-bold px-5 py-3 rounded-full transition-all">MORE ABOUT ME</button>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -71,7 +73,7 @@ const Home: NextPage = () => {
 				</div>
 			</div>
 			{/* about me */}
-			<div className="flex h-screen bg-gray-100">
+			<div className="flex h-screen bg-gray-100" id="about">
 				{/* left drawer navigator */}
 				<nav className="bg-emerald-100 h-screen top-0 left-0 flex-col hidden md:flex">
 					<div className="flex items-center justify-center relative bg-emerald-100">
@@ -148,7 +150,7 @@ const Home: NextPage = () => {
 								<div className="grid grid-cols-1 md:grid-cols-4 justify-center my-2">
 									<div className="flex justify-center my-4 md:mr-4">
 										<div className="w-32">
-											<Image src="/images/mobile-dev.svg" width={1170} height={911} alt="application development logo"/>
+											<Image src="/images/mobile-dev.svg" width={1170} height={911} alt="application development logo" />
 										</div>
 									</div>
 									<div className="flex flex-col md:col-span-3">

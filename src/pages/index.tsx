@@ -51,8 +51,8 @@ const Home: NextPage<{ account: Account }> = ({ account }) => {
 			<div className="md:min-h-screen grid md:grid-cols-2 grid-cols-1 gap-4" id="home">
 				<div className="flex flex-col items-center justify-center py-16 text-center md:text-left">
 					<div className="flex flex-col md:w-4/5 mx-4 md:mx-0">
-						<h2 className="font-bold md:text-5xl text-4xl">HI THERE!</h2>
-						<h1 className="font-bold md:text-7xl text-5xl">
+						<h2 className="font-bold text-4xl">HI THERE!</h2>
+						<h1 className="font-bold sm:text-6xl text-5xl">
 							{"I'M"} <span className="text-emerald-300">AMIRRUL</span>
 						</h1>
 						<div className="flex justify-center md:justify-start">
@@ -65,7 +65,7 @@ const Home: NextPage<{ account: Account }> = ({ account }) => {
 						<div className="mt-8">
 							<p>
 								{
-									"I'm a software developer and a self-proclaimed model. I'm currently working at Recap Sdn Bhd. Drop me a text if you want to talk to me about anything. Also I am sorry for the explicit image of myself. I'm not a model. I'm a software developer. I swear it's just a placeholder for a better picture of myself..."
+									"I'm a software developer and a self-proclaimed model. I'm currently working at Recap Sdn Bhd. Drop me a text if you want to talk to me about anything."
 								}
 							</p>
 						</div>
@@ -76,19 +76,19 @@ const Home: NextPage<{ account: Account }> = ({ account }) => {
 						</div>
 					</div>
 				</div>
-				<div className="flex items-center justify-center relative bg-emerald-100">
-					<div className="max-w-sm md:max-w-lg w-full p-8">
-						<Image src="/images/sexy-amirrul-2.png" alt="Amirrul Kasmirhan" height={1088} width={713} layout="responsive" />
+				<div className="flex items-end justify-end relative bg-emerald-100">
+					<div className="max-w-sm md:max-w-3xl w-full">
+						<Image src="/images/goofy-amirrul-1.png" alt="Amirrul Kasmirhan" height={1000} width={1000} layout="responsive" />
 					</div>
 				</div>
 			</div>
 			{/* about me */}
 			<div className="flex bg-gray-100" id="about">
 				{/* left drawer navigator */}
-				<nav className="bg-emerald-100 min-h-screen top-0 left-0 flex-col hidden md:flex">
+				<nav className="bg-emerald-300 min-h-screen top-0 left-0 flex-col hidden md:flex">
 					<div className="flex items-center justify-center relative bg-emerald-100">
-						<div className="max-w-sm md:max-w-lg w-full mx-8">
-							<Image src="/images/sexy-amirrul-2.png" alt="Amirrul Kasmirhan" height={1088} width={713} layout="responsive" />
+						<div className="max-w-sm md:max-w-lg w-full bg-emerald-100">
+							<Image src="/images/goofy-amirrul-1.png" alt="Amirrul Kasmirhan" height={1000} width={1000} layout="responsive" />
 						</div>
 					</div>
 					<div className="grow flex items-center justify-center px-16">
@@ -186,7 +186,7 @@ const NavItem = ({ label, href }: { label: string; href: string }) => {
 	return (
 		<>
 			<li className="py-1">
-				<a href={href} className="text-lg uppercase font-black hover:text-emerald-400 transition-all">
+				<a href={href} className="text-lg uppercase font-black hover:text-white transition-all">
 					<h3>{label}</h3>
 				</a>
 			</li>

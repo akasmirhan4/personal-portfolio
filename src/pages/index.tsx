@@ -83,9 +83,9 @@ const Home: NextPage<{ account: Account }> = ({ account }) => {
 				</div>
 			</div>
 			{/* about me */}
-			<div className="flex h-screen bg-gray-100" id="about">
+			<div className="flex bg-gray-100" id="about">
 				{/* left drawer navigator */}
-				<nav className="bg-emerald-100 h-screen top-0 left-0 flex-col hidden md:flex">
+				<nav className="bg-emerald-100 min-h-screen top-0 left-0 flex-col hidden md:flex">
 					<div className="flex items-center justify-center relative bg-emerald-100">
 						<div className="max-w-sm md:max-w-lg w-full mx-8">
 							<Image src="/images/sexy-amirrul-2.png" alt="Amirrul Kasmirhan" height={1088} width={713} layout="responsive" />
@@ -102,7 +102,7 @@ const Home: NextPage<{ account: Account }> = ({ account }) => {
 						</ul>
 					</div>
 				</nav>
-				<div className="container grow">
+				<div className="container grow mx-8">
 					<div className="flex items-center justify-center">
 						<div className="border-dashed border w-full flex justify-center items-center py-4 border-gray-400 my-16 mx-4">
 							<h2 className="font-bold text-4xl md:text-8xl">ABOUT ME</h2>

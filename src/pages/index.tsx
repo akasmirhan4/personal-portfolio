@@ -48,7 +48,7 @@ const Home: NextPage<{ account: Account }> = ({ account }) => {
 			</Head>
 
 			{/* home */}
-			<div className="md:h-screen grid md:grid-cols-2 grid-cols-1 gap-4" id="home">
+			<div className="md:min-h-screen grid md:grid-cols-2 grid-cols-1 gap-4" id="home">
 				<div className="flex flex-col items-center justify-center py-16 text-center md:text-left">
 					<div className="flex flex-col md:w-4/5 mx-4 md:mx-0">
 						<h2 className="font-bold md:text-5xl text-4xl">HI THERE!</h2>
@@ -77,7 +77,7 @@ const Home: NextPage<{ account: Account }> = ({ account }) => {
 					</div>
 				</div>
 				<div className="flex items-center justify-center relative bg-emerald-100">
-					<div className="max-w-sm md:max-w-lg w-full">
+					<div className="max-w-sm md:max-w-lg w-full p-8">
 						<Image src="/images/sexy-amirrul-2.png" alt="Amirrul Kasmirhan" height={1088} width={713} layout="responsive" />
 					</div>
 				</div>
